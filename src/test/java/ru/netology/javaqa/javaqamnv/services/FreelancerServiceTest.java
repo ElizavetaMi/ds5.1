@@ -14,7 +14,7 @@ class FreelancerServiceTest {
         int result = service.calculateRestMonths(10000, 3000, 20000);
         assertEquals(3, result, "The number of rest months should be 3");
 
-        // Пример с меньшими значениями для threshold
+        // Пример с income = 100000, expenses = 60000, threshold = 150000
         result = service.calculateRestMonths(100000, 60000, 150000);
         assertEquals(2, result, "The number of rest months should be 2");
 
