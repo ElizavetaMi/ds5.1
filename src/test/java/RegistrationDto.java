@@ -1,13 +1,42 @@
+import jakarta.validation.constraints.Pattern;
+
 public class RegistrationDto {
+
+    @Pattern(regexp = "^[a-zA-Z0-9_]+$", message = "Invalid login")
     private String login;
+
     private String password;
     private String status;
 
+    // Конструктор
     public RegistrationDto(String login, String password, String status) {
         this.login = login;
         this.password = password;
         this.status = status;
     }
 
-    // геттеры и сеттеры (можно сгенерировать через Lombok)
+    // Геттеры и сеттеры
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
